@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Slideshow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <div id="slideshow"></div>
+        <div id="slide-counter">1/1</div>
+    </div>
+
+    <script src="js/bundle.js"></script>  
+
+    <script>
+        const markdownContent = `
+# 슬라이드 1
+
+- 항목 1
+- 항목 2
+
+---
+
+# 슬라이드 2
+
+이 슬라이드는 테스트입니다.
+
+---
+
+# 슬라이드 3
+
+## 하위 제목
+
+다양한 내용을 추가할 수 있습니다.
+        `;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const slideshow = new SlideShowView(markdownContent);  
+        });
+    </script>
+</body>
+</html>
